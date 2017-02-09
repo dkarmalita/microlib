@@ -1,14 +1,19 @@
 {
-  "name": "starwar-names",
-  "version": "1.0.0-beta.0",
+  "name": "starwar-names-hoj",
+  "version": "0.0.0-development",
   "description": "A microlib example",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/index.test.js",
+    "test:watch": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
+  "pre-commit": [
+    "test"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dkarmalita/microlib.git"
+    "url": "https://github.com/dkarmalita/microlib.git"
   },
   "keywords": [],
   "author": "Dmitriy Karmalita <altmine@gmail.com>",
@@ -19,5 +24,11 @@
   "homepage": "https://github.com/dkarmalita/microlib#readme",
   "dependencies": {
     "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.2.0",
+    "pre-commit": "1.2.2",
+    "semantic-release": "^6.3.2"
   }
 }
