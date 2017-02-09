@@ -8,7 +8,7 @@
     "test": "mocha src/index.test.js",
     "test:coverage": "nyc npm run test",
     "coverage:check": "nyc check-coverage --lines 90 --functions 90 --branches 90",
-    "report:coverage": "cat ./coverage/icov.info | codecov",
+    "codecov": "codecov --token=e4bfdd07-973a-4885-bb77-7ad0c522a877",
     "test:watch": "mocha src/index.test.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "codecov.io": "0.1.6",
+    "codecov": "1.0.1",
     "mocha": "3.2.0",
     "nyc": "10.1.2",
     "pre-commit": "1.2.2",
