@@ -1,0 +1,6 @@
+   {
+      "reporter": ["text", "text-summary", "lcov", "html"],
+      "include": ["src/**/*.*"],
+      "check-coverage": true,
+      "report-dir": "./test_reports/nyc_coverage"
+    }
