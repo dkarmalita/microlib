@@ -8,7 +8,7 @@
     "test": "mocha src/index.test.js",
     "test:coverage": "nyc npm run test",
     "coverage:check": "nyc check-coverage --lines 90 --functions 90 --branches 90",
-    "report:coverage": "cat ./coverage/icov-info | codecov",
+    "report:coverage": "cat ./coverage/icov.info | codecov",
     "test:watch": "mocha src/index.test.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
